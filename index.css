@@ -1,0 +1,246 @@
+
+/* ===== Global Styling ===== */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f4f4f8;
+  background: #090b12;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #090b12;
+  background-image:
+    linear-gradient(rgba(100, 120, 180, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(100, 120, 180, 0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+a {
+  color: #a5b4fc;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #c4b5fd;
+}
+
+h1,
+h2,
+h3 {
+  color: #ffffff;
+}
+
+p {
+  color: #c5c8d4;
+  line-height: 1.6;
+}
+
+/* ===== Header and Navigation ===== */
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 18px 4%;
+  background: #101421;
+  border-bottom: 1px solid #283149;
+}
+
+.site-header > a {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #c4b5fd;
+}
+
+.site-header nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+/* ===== Main Content ===== */
+
+main {
+  width: min(1100px, 92%);
+  margin: 32px auto;
+}
+
+section {
+  margin-top: 28px;
+}
+
+input,
+select {
+  width: auto;
+  max-width: 100%;
+  padding: 11px 12px;
+  margin: 8px 8px 8px 0;
+  color: #f4f4f8;
+  background: #141a29;
+  border: 1px solid #39435e;
+  border-radius: 8px;
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: #a5b4fc;
+}
+
+/* ===== Menu Cards ===== */
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 24px;
+}
+
+.item-card {
+  min-width: 0;
+  padding: 18px;
+  overflow-wrap: anywhere;
+  background: #111624;
+  border: 1px solid #283149;
+  border-radius: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.item-card:hover {
+  border-color: #818cf8;
+}
+
+.item-card img {
+  display: block;
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 14px;
+}
+
+.item-card h2 {
+  margin-top: 8px;
+}
+
+.item-card strong {
+  color: #c4b5fd;
+  font-size: 1.1rem;
+}
+
+.item-card a {
+  display: inline-block;
+  margin-top: 8px;
+}
+
+/* ===== Buttons ===== */
+
+button {
+  max-width: 100%;
+  padding: 11px 15px;
+  color: #ffffff;
+  background: #4f46e5;
+  border: none;
+  border-radius: 8px;
+  font: inherit;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #6366f1;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 3px;
+}
+
+/* ===== Cart ===== */
+
+#cart {
+  margin-top: 36px;
+  padding: 20px;
+  background: #111624;
+  border: 1px solid #283149;
+  border-radius: 14px;
+}
+
+/* ===== Images and Other Elements ===== */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+article {
+  margin-bottom: 16px;
+}
+
+/* ===== Tablet Layout ===== */
+
+@media (max-width: 900px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  main {
+    width: 94%;
+  }
+}
+
+/* ===== Mobile Layout ===== */
+
+@media (max-width: 600px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 4%;
+  }
+
+  .site-header nav {
+    gap: 14px;
+  }
+
+  main {
+    width: 92%;
+    margin: 24px auto;
+  }
+
+  .menu-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .item-card {
+    padding: 14px;
+  }
+
+  .item-card img {
+    height: 210px;
+  }
+
+  input,
+  select {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}
